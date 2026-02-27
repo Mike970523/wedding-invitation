@@ -200,6 +200,9 @@ p {
     height: 90dvh;
 }
 
+.assis-form {
+    height: 50dvh;
+}
 .assis-form .group-content-title {
     color: #243533;
     text-align: center;
