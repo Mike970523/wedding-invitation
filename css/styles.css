@@ -1,5 +1,5 @@
 :root {
-    --font-family: "Open Sans", sans-serif;
+    --font-family: "EB Garamond", serif;
     --font-size: 16px;
     --font-color: #243533;
 
@@ -14,9 +14,12 @@ body {
     font-size: var(--font-size);
     color: var(--font-color);
     line-height: 1.4;
-    background-color: #F7F4EF;
+    background-color: #f3ede1;
 }
 h1 {
+    margin: 0;
+}
+p {
     margin: 0;
 }
 .hero-image-content {
@@ -43,6 +46,9 @@ h1 {
     justify-content: center;
     gap: 18px;
     }
+    .hero-text.mid {
+        height: 50dvh;
+    }
     .hero-text p {
         margin: 0;
         font-family: "Ballet", cursive;
@@ -51,23 +57,31 @@ h1 {
     .name { font-size: 60px;}
     .date { font-size: 40px;}
 .header {
-    height: 120px;
+    /* height: 120px; */
     background-color: #964734; 
     /* padding-inline: 24px; */
     position: sticky;
     top: 0;
     z-index: 1000;
 
-    display: flex;
-    align-items: center;
+    /* display: flex; */
+    /* align-items: center; */
     /* justify-content: space-between; */
     /* position: relative; */
+
+    padding: 18px;
+    padding-bottom: 8px;
+    display: flex;
+    justify-content: flex-start;
     }
     .header-names {
-        height: 120px;
-        display: flex;
+        /* height: 120px; */
+        /* display: flex;
         align-items: center;
-        margin-left: 12px;
+        margin-left: 12px; */
+        font-family: "Ballet", cursive;
+        color: #fff;
+        font-size: 34px;
         }
         .header-names img {
             display: block;
@@ -129,12 +143,14 @@ h1 {
     display: block;
     align-self: flex-end;
 }
-.big-day {
+.big-day,
+.bus,
+.assis-form {
     height: 80dvh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 24px;
+    padding-block: 24px;
     padding-inline: 14px;
     gap: 36px;
 }
@@ -152,6 +168,7 @@ h1 {
     flex-direction: column;
     align-items: center;
     gap: 8px;
+    text-align: center;
     }
     .group-content-title {
         font-size: 28px;
@@ -179,3 +196,20 @@ h1 {
         color: #fff;
         font-size: 18px;
     }
+/* .bus {
+    height: 100%;
+} */
+
+.assis-form .group-content-title {
+    color: #243533;
+    text-align: center;
+    font-size: 32px;
+    }
+    .assis-form .group-content-title:before {
+        display: none;
+    }
+.form-data {
+    color: #692721;
+    font-size: 24px;
+    font-weight: 700;
+}
