@@ -196,9 +196,9 @@ p {
         color: #fff;
         font-size: 18px;
     }
-/* .bus {
-    height: 100%;
-} */
+.bus {
+    height: 90dvh;
+}
 
 .assis-form .group-content-title {
     color: #243533;
