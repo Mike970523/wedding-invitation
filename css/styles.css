@@ -1,8 +1,120 @@
 :root {
     --font-family: "Open Sans", sans-serif;
     --ballet-font: "Ballet", cursive;
+    --font-color: #243533;
+    --title-color: #692721;
+
+    --padding: 16px;
+
+    --ico-w: 40px;
+    --ico-h: 40px;
+
+    --navBar-bg: #692721;
+    --navBar-h: 60px;
+
+    --btn-bg: #964734;
 }
 
 body {
     font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
 }
+
+p { margin: 0;}
+
+/* icons */
+i {
+    width: var(--ico-w);
+    height: var(--ico-h);
+    display: block;
+    background-size: var(--ico-w);
+}
+.ico-burger {
+    background-image: url(/img/ico-menu.png);
+}
+
+/* section title */
+h1 {
+    margin: 0;
+    font-family: var(--ballet-font);
+    color: var(--title-color);
+    font-size: 80px;
+    font-weight: 400;
+}
+
+/* hero image */
+.hero-container {
+    min-height: 100vh;
+    background-image: url(/img/hero.jpg);
+    background-position: center;
+    background-size: cover;
+    }
+    
+/* navbar */
+.navbar {
+    padding-inline: var(--padding);
+    background-color: var(--navBar-bg);
+    height: var(--navBar-h);
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* link buttons */
+.btn-container {
+    display: flex;
+    justify-content: center;
+    }
+    .btn {
+        background-color: var(--btn-bg);
+        padding-inline: var(--padding);
+        height: 48px;
+        border-radius: 4px;
+        text-decoration: none;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        }
+        
+/* sections */
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.title {
+    align-self: center;
+    margin-top: 24px;
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.info-container {
+    padding-inline: var(--padding);
+    display: flex;
+    flex-direction: column;
+    }
+    .info-content {
+        display: flex;
+        flex-direction: column;
+        }
+        .info-content.right { 
+            align-self: end;
+            text-align: right;
+        }
+        .info-title {
+            color: var(--title-color);
+            font-size: 28px;
+        }
+        .info-description {
+            display: flex;
+            flex-direction: column;
+            font-size: 14px;
+        }
+
