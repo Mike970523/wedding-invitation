@@ -11,25 +11,31 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="wrapper">
+    <div class="wrapper" id="inicio">
         <div class="content">
             <!-- HERO BANNER-->
-            <div class="hero-container">
-                <!-- <div class="hero-image">
-                    <img src="img/hero.jpg" alt="">
-                </div>
-                <div class="hero-text">
-
-                </div> -->
+            <div class="hero-container">               
             </div>
 
             <div class="container">
-                <nav class="navbar">
+                <header class="navbar">
                     <i class="ico-burger"></i>
-                </nav>
+                    <nav class="pannel">
+                        <header>
+                            <i class="ico-close"></i>
+                        </header>
+                        <ul>
+                            <li class="menu-item" data-rel="inicio">Inicio</li>
+                            <li class="menu-item" data-rel="donde">¿Dónde?</li>
+                            <li class="menu-item" data-rel="transporte">Transporte</li>
+                            <li class="menu-item" data-rel="formulario">Formulario</li>
+                        </ul>
+                    </nav>
+                </header>
+                
 
                 <!-- Gran Dia -->
-                <div class="flex-container">
+                <div class="flex-container" id="donde">
                     <h1 class="title"> El gran día </h1>
                     <div class="img-container">
                         <img src="/img/gran-dia.jpg" alt="">
@@ -62,7 +68,7 @@
                 </div>
 
                 <!-- Transporte -->
-                <div class="flex-container">
+                <div class="flex-container" id="transporte">
                     <div class="img-container">
                         <img src="/img/transporte.jpg" alt="">
                     </div>
@@ -96,7 +102,7 @@
                 </div>
 
                 <!-- ¿ Te Apuntas ? -->
-                <div class="flex-container">
+                <div class="flex-container" id="formulario">
                     <div class="img-container">
                         <img src="/img/te-apuntas.jpg" alt="">
                     </div>
