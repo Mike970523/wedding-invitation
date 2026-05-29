@@ -15,7 +15,14 @@
         <div class="content">
             <!-- HERO BANNER-->
             <div class="hero-container">     
-                         
+                <div class="hero-names">
+                    <span> Ariana </span>
+                    <span> y </span>
+                    <span> Miguel </span>
+                </div>
+                <div class="hero-data">
+                    <span>24 · 10 · 2026</span>
+                </div>
             </div>
 
             <div class="container">
@@ -31,6 +38,37 @@
                             <li class="menu-item" data-rel="transporte">Transporte</li>
                             <li class="menu-item" data-rel="formulario">Formulario</li>
                         </ul>
+
+                        <!-- MUSIC PLAYER -->
+                        <div class="music-player">
+
+                            <div class="music-cover">
+                                <img src="/music/portada.jpg" alt="">
+                            </div>
+
+                            <div class="music-info">
+                                <span class="music-title">
+                                    Yemen
+                                </span>
+
+                                <span class="music-artist">
+                                    Kase O
+                                </span>
+                            </div>
+
+                            <button class="music-control">
+                                <i class="ico-play"></i>
+                            </button>
+
+                            <div class="music-progress">
+                                <div class="music-progress-bar"></div>
+                            </div>
+
+                            <audio id="audio">
+                                <source src="/music/yemen.mp3" type="audio/mp3">
+                            </audio>
+
+                        </div>
                     </nav>
                 </header>
                 
@@ -137,36 +175,7 @@
         </div>
     </div>
 
-    <!-- MUSIC PLAYER -->
-    <div class="music-player">
-
-        <div class="music-cover">
-            <img src="/music/portada.jpg" alt="">
-        </div>
-
-        <div class="music-info">
-            <span class="music-title">
-                Yemen
-            </span>
-
-            <span class="music-artist">
-                Kase O
-            </span>
-        </div>
-
-        <button class="music-control">
-            <i class="ico-play"></i>
-        </button>
-
-        <div class="music-progress">
-            <div class="music-progress-bar"></div>
-        </div>
-
-        <audio id="audio">
-            <source src="/music/yemen.mp3" type="audio/mp3">
-        </audio>
-
-    </div>
+    
     <script src="/js/script.js"></script>
 </body>
 </html>

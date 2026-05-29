@@ -51,6 +51,37 @@ h1 {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 1fr 120px;
+    padding-inline: 16px;
+    color: #fff;
+    font-family: var(--ballet-font);
+    }
+    .hero-names {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        justify-content: center;
+        font-size: 88px;
+        
+        }
+        .hero-names span:first-child {
+            align-self: flex-start;
+        }
+        .hero-names span:nth-child(2) {
+            font-size: 42px;
+        }
+        .hero-names span:nth-child(3) {
+            align-self: flex-end;
+        }
+    .hero-data {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 66px;
     }
     
 /* navbar */
