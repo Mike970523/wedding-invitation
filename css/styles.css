@@ -222,7 +222,7 @@ h1 {
     padding-inline: var(--padding);
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 48px;
 
     flex: 1;
     height: 100%;
