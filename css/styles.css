@@ -91,6 +91,9 @@ h1 {
         }
         .hero-names span:nth-child(3) {
             align-self: flex-end;
+
+            margin-right: 42px;
+            margin-top: 32px;
         }
     .hero-data {
         display: flex;
@@ -175,6 +178,8 @@ h1 {
 .btn-container {
     display: flex;
     justify-content: center;
+
+    margin-top: 42px;
     }
     .btn {
         background-color: var(--btn-bg);
@@ -222,7 +227,7 @@ h1 {
     padding-inline: var(--padding);
     display: flex;
     flex-direction: column;
-    gap: 48px;
+    gap: 16px;
 
     flex: 1;
     height: 100%;
