@@ -6,8 +6,8 @@
 
     --padding: 16px;
 
-    --ico-w: 40px;
-    --ico-h: 40px;
+    --ico-w: 32px;
+    --ico-h: 32px;
 
     --navBar-bg: #692721;
     --navBar-h: 60px;
@@ -19,6 +19,8 @@ body {
     font-family: var(--font-family);
     margin: 0;
     padding: 0;
+
+    background-color: #F7F4EF;
 }
 
 p { margin: 0;}
@@ -29,6 +31,9 @@ i {
     height: var(--ico-h);
     display: block;
     background-size: var(--ico-w);
+
+    background-repeat: no-repeat;
+    background-position: center;
 }
 .ico-burger { background-image: url(/img/ico-menu.png); }
 .ico-close { background-image: url(/img/ico-close.png);}
@@ -119,10 +124,13 @@ h1 {
     transform:translateY(-20px);
     pointer-events:none;
 
+    z-index: 100;
+    
     transition:
         opacity .35s ease,
         transform .35s ease;
     }
+    
     /* cuando aparece */
     .navbar.visible{
         opacity:1;
@@ -177,6 +185,11 @@ h1 {
         color: #fff;
         display: flex;
         align-items: center;
+        justify-content: center;
+
+        min-width: 140px;    
+        font-size: 18px;
+        font-weight: 600;   
         }
         
 /* sections */
@@ -191,7 +204,10 @@ h1 {
     flex-direction: column;
     gap: 24px;
     min-height: 100vh;
-}
+
+    margin-bottom: 34px;
+    }
+    
 .title {
     align-self: center;
     margin-top: 24px;
@@ -206,27 +222,71 @@ h1 {
     padding-inline: var(--padding);
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 16px;
+
+    flex: 1;
+    height: 100%;
+    }
+    .info-text {
+        flex: 1;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
     }
     .info-content {
         display: flex;
         flex-direction: column;
+        gap: 12px;
 
         position: relative;
+        padding-bottom: 12px;
         }
         .info-content.right { 
             align-self: end;
             text-align: right;
+            padding-bottom: 0;
+            padding-top: 12px;
         }
         .info-title {
             color: var(--title-color);
             font-size: 28px;
-        }
-        .info-description {
+
+            display: flex;
+            flex-direction: row;
+            gap: 12px;
+            }
+            .right .info-title {
+                justify-content: flex-end;
+            }
+        .info-description, 
+        .description {
             display: flex;
             flex-direction: column;
-            font-size: 14px;
+
+            color: #243533;
+            font-size: 16px;
         }
+        .description {
+            text-align: center;
+        }
+/* Fix section Te apuntas */
+#formulario .btn-container {
+    margin-top: 24px;
+}
+#formulario .info-content:nth-child(2) {
+    margin-top: 24px;
+}
+.bank-count {
+    color: #243533;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-size: 16px;
+    }
+    .bank-count p {
+        font-weight: 600;
+    }
 /* separador */
 .spacer {
     background-color: #692721;
