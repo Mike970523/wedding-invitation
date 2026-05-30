@@ -125,7 +125,7 @@ h1 {
     pointer-events:none;
 
     z-index: 100;
-    
+
     transition:
         opacity .35s ease,
         transform .35s ease;
@@ -273,10 +273,9 @@ h1 {
 /* Fix section Te apuntas */
 #formulario .btn-container {
     margin-top: 24px;
+    margin-bottom: 24px;
 }
-#formulario .info-content:nth-child(2) {
-    margin-top: 24px;
-}
+
 .bank-count {
     color: #243533;
     display: flex;
