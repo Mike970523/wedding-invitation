@@ -280,7 +280,9 @@ h1 {
     margin-top: 24px;
     margin-bottom: 24px;
 }
-
+#formulario .info-description p:first-child {
+    font-weight: 600;
+}
 .bank-count {
     color: #243533;
     display: flex;
