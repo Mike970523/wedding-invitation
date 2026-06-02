@@ -64,6 +64,10 @@ h1 {
 .hero-container {
     min-height: 100vh;
     height: 100vh;
+
+    min-height: 100dvh;
+    height: 100dvh;
+
     background-image: url(/img/hero.jpg);
     background-position: center;
     background-size: cover;
