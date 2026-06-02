@@ -292,6 +292,7 @@ h1 {
     }
     .bank-count p {
         font-weight: 600;
+        text-align: center;
     }
 /* separador */
 .spacer {
