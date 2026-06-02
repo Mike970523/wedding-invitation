@@ -94,63 +94,13 @@ navLinks.forEach( item => {
     item.addEventListener('click', event => {
         event.preventDefault()
 
+        if(item.classList.contains('!active')) {
+            item.classList.add('active')
+        }
+
         const section = item.dataset.rel
         moveScrollto(section)
 
         panel.classList.remove('open');
     })
-})
-
-/* music player */
-const audio = document.getElementById('audio')
-
-const playBtn = document.querySelector('.music-control')
-const progressBar = document.querySelector('.music-progress-bar')
-
-const icon = playBtn.querySelector('i')
-
-
-
-/* PLAY / PAUSE */
-
-playBtn.addEventListener('click', () => {
-
-    if(audio.paused){
-
-        audio.play()
-
-        icon.classList.remove('ico-play')
-        icon.classList.add('ico-pause')
-
-    } else {
-
-        audio.pause()
-
-        icon.classList.remove('ico-pause')
-        icon.classList.add('ico-play')
-    }
-})
-
-
-
-/* PROGRESS */
-
-audio.addEventListener('timeupdate', () => {
-
-    const progress =
-        (audio.currentTime / audio.duration) * 100
-
-    progressBar.style.width = `${progress}%`
-})
-
-
-
-/* RESET ICON */
-
-audio.addEventListener('ended', () => {
-
-    icon.classList.remove('ico-pause')
-    icon.classList.add('ico-play')
-
-    progressBar.style.width = `0%`
 })

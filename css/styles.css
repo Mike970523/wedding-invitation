@@ -36,7 +36,11 @@ i {
     background-position: center;
 }
 .ico-burger { background-image: url(/img/ico-menu.png); }
-.ico-close { background-image: url(/img/ico-close.png);}
+.ico-close { 
+    background-image: url(/img/ico-close.png);
+    --ico-w: 24px;
+    --ico-h: 24px;
+}
 .ico-play { background-image: url(/img/ico-play.png);}
 .ico-pause { background-image: url(/img/ico-pause.png);}
 
@@ -143,7 +147,7 @@ h1 {
     .navbar .pannel {
         position: fixed;
         top: 0px;
-        background-color: #fff;
+        background-color: #F7F4EF;
         right: 0px;
         transform: translateX(100%);
         transition: transform .14s ease;
@@ -158,14 +162,19 @@ h1 {
         .pannel.open { transform: translateX(0); }
         .pannel header {
             display: flex;
-            justify-content: flex-end;
-            padding-right: var(--padding);
+            padding-inline: var(--padding);
+            align-items: center;
+        }
+        .header-title {
+            flex: 1;
+            font-size: 18px;
+            font-weight: 100;
+            color: var(--title-color);
         }
         .pannel ul {
             list-style: none;
             padding: 0;
             margin: 0;
-            padding-left: 24px;
             display: flex;
             flex-direction: column;
             gap: 18px;
@@ -174,6 +183,20 @@ h1 {
             .menu-item.active {
                 color: var(--title-color);
             }
+            .menu-item {
+                padding-left: 24px;
+                position: relative;
+                color: #243533;
+                }
+                .menu-item:before{
+                    content: '';
+                    position: absolute;
+                    height: 1px;
+                    width: 75%;
+                    background-color: #69272138;
+                    bottom: -4px;
+                    left: 10px;                   
+                }
 /* link buttons */
 .btn-container {
     display: flex;
