@@ -5,6 +5,8 @@ const burger = document.querySelector('.ico-burger');
 const panel = document.querySelector('.pannel');
 const closeBtn = document.querySelector('.ico-close');
 
+const body = document.querySelector('body')
+
 let navbarReachedTop = false;
 
 /* MOSTRAR NAVBAR AL PASAR MEDIA HERO */
@@ -52,19 +54,19 @@ burger.addEventListener('click', () => {
         */
 
         setTimeout(() => {
-            panel.classList.add('open');
+            body.classList.add('open');
         }, 500);
 
     } else {
 
-        panel.classList.add('open');
+        body.classList.add('open');
     }
 });
 
 /* CERRAR MENÚ */
 
 closeBtn.addEventListener('click', () => {
-    panel.classList.remove('open');
+    body.classList.remove('open');
 });
 
 function moveScrollto(id) {
@@ -93,10 +95,6 @@ const navLinks = document.querySelectorAll('.menu-item')
 navLinks.forEach( item => {
     item.addEventListener('click', event => {
         event.preventDefault()
-
-        if(item.classList.contains('!active')) {
-            item.classList.add('active')
-        }
 
         const section = item.dataset.rel
         moveScrollto(section)

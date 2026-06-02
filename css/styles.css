@@ -140,6 +140,9 @@ h1 {
     }
     
     /* cuando aparece */
+    body.open {
+        overflow: hidden;
+    }
     .navbar.visible{
         opacity:1;
         transform:translateY(0);
@@ -160,7 +163,7 @@ h1 {
         gap: 32px;
         padding-top: var(--padding);
         }
-        .pannel.open { transform: translateX(0); }
+        .open .pannel { transform: translateX(0); }
         .pannel header {
             display: flex;
             padding-inline: var(--padding);
