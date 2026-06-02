@@ -6,31 +6,64 @@ const panel = document.querySelector('.pannel');
 const closeBtn = document.querySelector('.ico-close');
 
 const body = document.querySelector('body')
+const firstSection = document.getElementById('donde');
 
 let navbarReachedTop = false;
+let navbarVisible = false;
+let heroHeightLocked = false;
 
-/* MOSTRAR NAVBAR AL PASAR MEDIA HERO */
-
-function checkNavbarVisibility() {
-
-    const heroHeight = hero.offsetHeight;
-    const triggerPoint = heroHeight / 2;
-
-    if (window.scrollY > triggerPoint) {
-        navbar.classList.add('visible');
-    } else {
-        navbar.classList.remove('visible');
+function setStableHeroHeight() {
+    if (heroHeightLocked) {
+        return;
     }
 
-    /* comprobar si la navbar ya tocó el top */
-    const rect = navbar.getBoundingClientRect();
+    const viewportHeight = window.visualViewport
+        ? window.visualViewport.height
+        : window.innerHeight;
 
-    navbarReachedTop = rect.top <= 0;
+    document.documentElement.style.setProperty('--hero-height', `${viewportHeight}px`);
+    heroHeightLocked = true;
 }
 
-window.addEventListener('scroll', checkNavbarVisibility);
+/* MOSTRAR NAVBAR CUANDO APARECE LA SECCION "DONDE" */
 
-checkNavbarVisibility();
+// function checkNavbarVisibility() {
+//     if (!firstSection) {
+//         return;
+//     }
+
+//     const sectionTop = firstSection.getBoundingClientRect().top;
+//     const showPoint = window.innerHeight - 1;
+//     const hidePoint = window.innerHeight + navbar.offsetHeight;
+
+//     if (!navbarVisible && sectionTop <= showPoint) {
+//         navbarVisible = true;
+//     }
+
+//     if (navbarVisible && sectionTop > hidePoint) {
+//         navbarVisible = false;
+//     }
+
+//     navbar.classList.toggle('visible', navbarVisible);
+
+//     /* comprobar si la navbar ya tocó el top */
+//     const rect = navbar.getBoundingClientRect();
+
+//     navbarReachedTop = rect.top <= 0;
+// }
+
+setStableHeroHeight();
+
+// window.addEventListener('scroll', checkNavbarVisibility, { passive: true });
+// window.addEventListener('orientationchange', () => {
+//     heroHeightLocked = false;
+//     setTimeout(() => {
+//         setStableHeroHeight();
+//         checkNavbarVisibility();
+//     }, 300);
+// });
+
+// checkNavbarVisibility();
 
 /* ABRIR MENÚ */
 
@@ -71,7 +104,7 @@ closeBtn.addEventListener('click', () => {
 
 function moveScrollto(id) {
     //Obtener la altura del header
-    const headerElement = document.querySelector('navbar')
+    const headerElement = document.querySelector('.navbar')
     const headerHeight = headerElement ? headerElement.offsetHeight : 0;
 
     const secureSpace = 30;
