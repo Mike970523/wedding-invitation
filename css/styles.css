@@ -124,16 +124,19 @@ h1 {
     padding-inline: var(--padding);
     background-color: var(--navBar-bg);
     height: var(--navBar-h);
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: flex-end;
 
      /* estado inicial */
-    /* opacity:0;
-    transform:translateY(-20px);
-    pointer-events:none; */
+    opacity:0;
+    transform:translateY(-100%);
+    pointer-events:none;
 
     z-index: 100;
 
@@ -235,6 +238,7 @@ h1 {
     display: flex;
     flex-direction: column;
     gap: 24px;
+    padding-top: var(--navBar-h);
 }
 .flex-container {
     display: flex;

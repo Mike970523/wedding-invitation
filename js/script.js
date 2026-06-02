@@ -6,6 +6,7 @@ const panel = document.querySelector('.pannel');
 const closeBtn = document.querySelector('.ico-close');
 
 const body = document.querySelector('body')
+const container = document.querySelector('.container');
 const firstSection = document.getElementById('donde');
 
 let navbarReachedTop = false;
@@ -54,16 +55,43 @@ function setStableHeroHeight() {
 
 setStableHeroHeight();
 
-// window.addEventListener('scroll', checkNavbarVisibility, { passive: true });
-// window.addEventListener('orientationchange', () => {
-//     heroHeightLocked = false;
-//     setTimeout(() => {
-//         setStableHeroHeight();
-//         checkNavbarVisibility();
-//     }, 300);
-// });
+function checkNavbarVisibility() {
+    if (!container) {
+        return;
+    }
 
-// checkNavbarVisibility();
+    const containerTop = container.getBoundingClientRect().top;
+
+    if (!navbarVisible && containerTop <= navbar.offsetHeight) {
+        navbarVisible = true;
+    }
+
+    if (navbarVisible && containerTop > navbar.offsetHeight * 2) {
+        navbarVisible = false;
+    }
+
+    navbar.classList.toggle('visible', navbarVisible);
+    navbarReachedTop = navbarVisible;
+}
+
+function isNavbarAreaReached() {
+    if (!container) {
+        return true;
+    }
+
+    return container.getBoundingClientRect().top <= navbar.offsetHeight;
+}
+
+window.addEventListener('scroll', checkNavbarVisibility, { passive: true });
+window.addEventListener('orientationchange', () => {
+    heroHeightLocked = false;
+    setTimeout(() => {
+        setStableHeroHeight();
+        checkNavbarVisibility();
+    }, 300);
+});
+
+checkNavbarVisibility();
 
 /* ABRIR MENÚ */
 
@@ -74,9 +102,9 @@ burger.addEventListener('click', () => {
         hacemos scroll automático hasta ella
     */
 
-    if (!navbarReachedTop) {
+    if (!isNavbarAreaReached()) {
 
-        navbar.scrollIntoView({
+        container.scrollIntoView({
             behavior: 'smooth',
             block: 'start'
         });
