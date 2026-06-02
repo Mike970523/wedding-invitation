@@ -99,6 +99,6 @@ navLinks.forEach( item => {
         const section = item.dataset.rel
         moveScrollto(section)
 
-        panel.classList.remove('open');
+        body.classList.remove('open');
     })
 })
