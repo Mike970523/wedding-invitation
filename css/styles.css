@@ -40,6 +40,7 @@ i {
     background-image: url(/img/ico-close.png);
     --ico-w: 24px;
     --ico-h: 24px;
+    opacity: .7;
 }
 .ico-play { background-image: url(/img/ico-play.png);}
 .ico-pause { background-image: url(/img/ico-pause.png);}
