@@ -311,6 +311,12 @@ h1 {
         .description {
             text-align: center;
         }
+        small {
+            color: var(--font-color);
+            font-size: 12px;
+            font-weight: 100;
+            margin-top: 12px;
+        }
 /* Fix section Te apuntas */
 #formulario .btn-container {
     margin-top: 24px;
